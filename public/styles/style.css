@@ -296,8 +296,8 @@ h1 {
 
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 
-    opacity: 0;
-    transform: translateY(40px);
+    opacity: 1;
+    transform: translateY(0);
 
     transition: transform 0.3s ease,
                 box-shadow 0.3s ease;

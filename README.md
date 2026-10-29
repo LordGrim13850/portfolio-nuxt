@@ -40,7 +40,7 @@ bun run dev
 
 ## Production
 
-Build the application for production:
+Build the server-rendered Nuxt application for production:
 
 ```bash
 # npm
@@ -56,7 +56,9 @@ yarn build
 bun run build
 ```
 
-Locally preview production build:
+Deploy the generated Nuxt/Nitro server output to a host that supports Nuxt server applications. Do not use `nuxt generate` or a static-only hosting target for this project.
+
+Locally preview the production build:
 
 ```bash
 # npm
