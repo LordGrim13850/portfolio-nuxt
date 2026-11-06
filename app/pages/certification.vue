@@ -40,6 +40,24 @@ const certifications = [
     fullImage: '/images/nwbs.png',
     verification: 'https://www.credly.com/badges/c870902d-6a30-47f8-aaab-64ebc4b999f7/public_url',
   },
+  {
+    title: 'IT Specialist: Databases',
+    image: '/images/databases.png',
+    fullImage: '/images/databases.png',
+    verification: 'https://www.credly.com/badges/a63b038e-d3d7-47d0-86c5-b13798f6bbd1/public_url',
+  },
+   {
+    title: 'MongoDB Overview: Core Concepts and Architecture',
+    image: '/images/mongodb-overview.png',
+    fullImage: '/images/mongodb-overview.png',
+    verification: 'https://www.credly.com/badges/dbfe2091-bcfe-4788-bd35-435999646e0f/public_url',
+  },
+  {
+    title: 'CRUD Operations in MongoDB',
+    image: '/images/mongodb-crud.png',
+    fullImage: '/images/mongodb-crud.png',
+    verification: 'https://www.credly.com/badges/50022ce2-eda6-4d79-b060-f8a804a2c9b9/public_url',
+  },
 ]
 
 useHead({
