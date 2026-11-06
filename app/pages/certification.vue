@@ -41,7 +41,7 @@ const certifications = [
     verification: 'https://www.credly.com/badges/c870902d-6a30-47f8-aaab-64ebc4b999f7/public_url',
   },
   {
-    title: 'IT Specialist: Databases',
+    title: 'Information Technology Specialist: Databases',
     image: '/images/databases.png',
     fullImage: '/images/databases.png',
     verification: 'https://www.credly.com/badges/a63b038e-d3d7-47d0-86c5-b13798f6bbd1/public_url',
