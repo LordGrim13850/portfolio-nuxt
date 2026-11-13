@@ -8,6 +8,13 @@ let typingTimer: ReturnType<typeof setInterval> | undefined
 useHead({
   title: 'Jhon Philip Villegas | Web Portfolio',
 })
+useSeoMeta({
+  description: 'The web development portfolio of Jhon Philip Villegas, an aspiring front-end developer.',
+  ogTitle: 'Jhon Philip Villegas | Web Portfolio',
+  ogDescription: 'Explore the projects, skills, and certifications of Jhon Philip Villegas.',
+  ogType: 'website',
+  twitterCard: 'summary',
+})
 
 onMounted(() => {
   let index = 0
@@ -31,7 +38,7 @@ onUnmounted(() => {
     <section class="home-hero">
       <div class="hero">
         <div class="hero-text">
-          <img src="/images/pfp.jpg" alt="Profile Picture">
+          <img src="/images/pfp.jpg" alt="Jhon Philip Villegas">
           <h2>Hi, I'm Jhon Philip Villegas</h2>
           <h3 id="typing">{{ typedRole }}</h3>
           <p>

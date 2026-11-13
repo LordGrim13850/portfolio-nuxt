@@ -348,6 +348,8 @@ h1 {
 /* Certificate Card */
 .cert-card {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 
     background: white;
 
@@ -383,8 +385,17 @@ h1 {
     cursor: pointer;
 }
 
+.cert-image-button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
 /* Certificate Text */
 .cert-card p {
+    flex: 1;
     padding: 15px;
 
     font-size: 18px;
@@ -397,14 +408,16 @@ h1 {
    BUTTONS
 ========================= */
 
-.verify-btn {
-    display: inline-block;
+.cert-card .verify-btn {
+    align-self: center;
+    width: 190px;
+    min-height: 40px;
+    height: 40px;
+    margin: auto auto 20px;
+    padding: 7px 12px;
+    font-size: 0.9rem;
 
-    margin-bottom: 20px;
-
-    padding: 10px 15px;
-
-    background: #093C5D;
+    background: #1e3c72;
 
     color: white;
 
@@ -639,4 +652,53 @@ body {
 .headerss {
     margin-top: 40px;
     color: white;
+}
+
+.portfolio-footer {
+    min-height: 64px;
+    padding: 18px 20px;
+    color: white;
+    background: #093C5D;
+}
+
+.not-found-page {
+    display: grid;
+    min-height: calc(100vh - 144px);
+    place-items: center;
+    padding: 32px 20px;
+    color: white;
+    text-align: center;
+}
+
+.not-found-content {
+    max-width: 620px;
+    padding: 40px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 16px;
+    background: rgba(9,60,93,0.65);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+.not-found-code {
+    margin-bottom: 8px;
+    color: #5DF8D8;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.not-found-content h1 {
+    margin: 12px 0;
+    color: white;
+}
+
+.not-found-content p:not(.not-found-code) {
+    margin-bottom: 24px;
+}
+
+@media (max-width: 480px) {
+    .not-found-content {
+        padding: 28px 20px;
+    }
 }

@@ -2,6 +2,13 @@
 useHead({
   title: 'About Me | Jhon Philip Villegas',
 })
+useSeoMeta({
+  description: 'Learn about Jhon Philip Villegas, his studies, interests, and goals as an aspiring front-end developer.',
+  ogTitle: 'About Me | Jhon Philip Villegas',
+  ogDescription: 'Jhon Philip Villegas is a student building skills in programming, web development, and design.',
+  ogType: 'profile',
+  twitterCard: 'summary',
+})
 </script>
 
 <template>

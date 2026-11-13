@@ -2,6 +2,24 @@
 useHead({
   title: 'Tech Stack | Jhon Philip Villegas',
 })
+useSeoMeta({
+  description: 'Explore the programming languages, web technologies, tools, and platforms used by Jhon Philip Villegas.',
+  ogTitle: 'Tech Stack | Jhon Philip Villegas',
+  ogDescription: 'Languages, tools, and technologies in Jhon Philip Villegas’s developer toolkit.',
+  ogType: 'website',
+  twitterCard: 'summary',
+})
+
+const technologies = [
+  { name: 'C Language', image: '/images/c.jpg' },
+  { name: 'Java', image: '/images/java.png' },
+  { name: 'PostgreSQL', image: '/images/sql.png' },
+  { name: 'HTML', image: '/images/html.png' },
+  { name: 'CSS', image: '/images/css.png' },
+  { name: 'Git', image: '/images/git.png' },
+  { name: 'GitHub', image: '/images/github.png' },
+  { name: 'VS Code', image: '/images/vscode.png' },
+]
 </script>
 
 <template>
@@ -10,45 +28,11 @@ useHead({
 
     <div class="container a">
       <div class="tech-container">
-        <div class="tech-card">
-          <img src="/images/c.jpg" alt="C Language">
-          <h2>C Language</h2>
-        </div>
-
-        <div class="tech-card">
-          <img src="/images/java.png" alt="Java">
-          <h2>Java</h2>
-        </div>
-
-        <div class="tech-card">
-          <img src="/images/sql.png" alt="SQL">
-          <h2>PostgreSQL</h2>
-        </div>
-
-        <div class="tech-card">
-          <img src="/images/html.png" alt="HTML">
-          <h2>HTML</h2>
-        </div>
-
-        <div class="tech-card">
-          <img src="/images/css.png" alt="CSS">
-          <h2>CSS</h2>
-        </div>
-
-        <div class="tech-card">
-          <img src="/images/git.png" alt="git">
-          <h2>Git</h2>
-        </div>
-
-        <div class="tech-card">
-          <img src="/images/github.png" alt="github">
-          <h2>GitHub</h2>
-        </div>
-
-        <div class="tech-card">
-          <img src="/images/vscode.png" alt="vscode">
-          <h2>VS Code</h2>
-        </div>
+        <TechStackCard
+          v-for="technology in technologies"
+          :key="technology.name"
+          v-bind="technology"
+        />
       </div>
     </div>
   </main>

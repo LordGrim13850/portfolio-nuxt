@@ -63,6 +63,13 @@ const certifications = [
 useHead({
   title: 'Certifications | Jhon Philip Villegas',
 })
+useSeoMeta({
+  description: 'Browse and verify the software, database, networking, and productivity certifications earned by Jhon Philip Villegas.',
+  ogTitle: 'Certifications | Jhon Philip Villegas',
+  ogDescription: 'A collection of verified technology and professional certifications earned by Jhon Philip Villegas.',
+  ogType: 'website',
+  twitterCard: 'summary',
+})
 </script>
 
 <template>
@@ -70,36 +77,18 @@ useHead({
     <h1 class="text-center fw-bold headerss">Certifications</h1>
 
     <section class="cert-container">
-      <article v-for="certification in certifications" :key="certification.title" class="cert-card">
-        <img
-          class="cert-img cert-thumb"
-          :src="certification.image"
-          :alt="certification.title"
-          role="button"
-          tabindex="0"
-          @click="selectedImage = certification.fullImage"
-          @keydown.enter="selectedImage = certification.fullImage"
-          @keydown.space.prevent="selectedImage = certification.fullImage"
-        >
-
-        <p>{{ certification.title }}</p>
-
-        <a
-          class="verify-btn btn btn-primary"
-          :href="certification.verification"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Verify Credentials
-        </a>
-      </article>
+      <CertificationCard
+        v-for="certification in certifications"
+        :key="certification.title"
+        v-bind="certification"
+        @preview="selectedImage = $event"
+      />
     </section>
 
-    <div
+    <dialog
       v-if="selectedImage"
       class="modal show"
-      role="dialog"
-      aria-modal="true"
+      open
       aria-label="Certificate image"
       @click.self="selectedImage = null"
       @keyup.esc.window="selectedImage = null"
@@ -108,6 +97,6 @@ useHead({
         &times;
       </button>
       <img class="modal-content" :src="selectedImage" alt="Enlarged certificate">
-    </div>
+    </dialog>
   </main>
 </template>
